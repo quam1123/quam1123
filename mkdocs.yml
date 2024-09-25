@@ -1,0 +1,14 @@
+site_name: MkLorum
+nav:
+  - Home: index.md
+  - User guide:
+    - first.md
+    - second.md
+  - About: about.md
+theme: readthedocs
+repo_url: https://github.com/quam1123/My-mkdocs
+deploy:
+  type: git
+  repo: https://github.com/quam1123/My-mkdocs.git
+  branch: master
+  
