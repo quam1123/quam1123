@@ -6,9 +6,3 @@ nav:
     - second.md
   - About: about.md
 theme: readthedocs
-repo_url: https://github.com/quam1123/My-mkdocs
-deploy:
-  type: git
-  repo: https://github.com/quam1123/My-mkdocs.git
-  branch: master
-  
