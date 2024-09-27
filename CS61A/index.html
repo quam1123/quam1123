@@ -53,7 +53,11 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">CS61A</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#lecture-2">Lecture 2</a>
+    <li class="toctree-l2"><a class="reference internal" href="#a-course-of-abstraction">A course of abstraction</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#lecture-2">Lecture 2</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -83,14 +87,33 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="this-is-a-notebook-of-lectures-of-cs61a">This is a notebook of lectures of CS61A</h1>
-<h2 id="lecture-2">Lecture 2</h2>
-<pre><code class="language-python">&gt;&gt;&gt; f = min
-&gt;&gt;&gt; f = max 
-&gt;&gt;&gt; g,h =min, max
-&gt;&gt;&gt; max=g
-&gt;&gt;&gt; max(f(2,g(h(1,5),3)),4)
+<h2 id="a-course-of-abstraction">A course of abstraction</h2>
+<h3 id="lecture-2">Lecture 2</h3>
+<p><strong>1.Q:</strong> analyse what is the output of the block</p>
+<pre><code class="language-python">f = min
+f = max 
+g,h =min, max
+max=g
+max(f(2,g(h(1,5),3)),4)
 </code></pre>
-<p>to analyse what is the output of the block</p>
+<p><strong>2.</strong> 从终端调用python mul/add函数/pi值：</p>
+<pre><code class="language-python">from operator import mul,add
+from math import pi
+</code></pre>
+<p><strong>3.</strong> 执行顺序：</p>
+<pre><code class="language-python">a = 1
+b = 2
+b,a = a + b, b
+</code></pre>
+<p>Output: a=2,b=3
+~~真的有人这样子写代码吗~~
+<strong>Rules:</strong>
+1. Evaluate all expressions to the right of= from left to right.
+2. Bind all names to the left of = to the resulting values in the current frame  </p>
+<p><strong>4.</strong> How to define a function:</p>
+<pre><code class="language-python">def &lt;name&gt;(&lt;formal parameters&gt;):
+    return &lt;return expression&gt;
+</code></pre>
               
             </div>
           </div><footer>
