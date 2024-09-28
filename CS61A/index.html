@@ -105,19 +105,31 @@ b,a = a + b, b
 </code></pre>
 <p>Output: a=2,b=3
 ~~真的有人这样子写代码吗~~
-<strong>Rules:</strong>
-   * Evaluate all expressions to the right of= from left to right.
-   * Bind all names to the left of = to the resulting values in the current frame  </p>
+<strong>Rules:</strong></p>
+<ul>
+<li>
+<p>Evaluate all expressions to the right of= from left to right.</p>
+</li>
+<li>
+<p>Bind all names to the left of = to the resulting values in the current frame  </p>
+</li>
+</ul>
 <p><strong>4.</strong> How to define a function:</p>
 <pre><code class="language-python">def &lt;name&gt;(&lt;formal parameters&gt;):
     return &lt;return expression&gt;
 </code></pre>
 <h2 id="lecture-2_1">Lecture 2</h2>
-<p><strong>1.None Indicateds that Nothing is Returned</strong>
-* The special value None represents nothing in Python
-* A function that does not explicitly return a value will return None
+<p><strong>1.None Indicateds that Nothing is Returned</strong></p>
+<ul>
+<li>
+<p>The special value None represents nothing in Python</p>
+</li>
+<li>
+<p>A function that does not explicitly return a value will return None
 <strong>Careful</strong>: None is not displayed by the interpreter as the value of an expression.</p>
-<p><strong>Q</strong> analyse what is the output of the following code </p>
+</li>
+</ul>
+<p><strong>Q:</strong> analyse what is the output of the following code </p>
 <pre><code class="language-python">print(print(1),print(2))
 </code></pre>
 <p><strong>A</strong></p>
@@ -132,16 +144,16 @@ None None
 def divide_exact(n,d):
     return floordiv(n,d),mod(n,d)
 </code></pre>
-<p>如果要查看q,r的值，我们通常会采取print函数~~，但是！不仅麻烦还不够帅！~~所以这里就采用交互模式
-Then </p>
+<p>如果要查看q,r的值，我们通常会采取print函数，~~但是！不仅麻烦还不够帅~~！所以这里就采用交互模式</p>
+<p>Then </p>
 <pre><code class="language-py">python3 -i pytest.py
 &gt;&gt;&gt; q
 201
 &gt;&gt;&gt; r
 3
 </code></pre>
-<p>That's what we see from Terminal
-<strong>交互模式！</strong></p>
+<p>That's what we see from Terminal  </p>
+<p><strong>交互模式！</strong></p>
               
             </div>
           </div><footer>
