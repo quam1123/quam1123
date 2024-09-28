@@ -104,8 +104,8 @@ b = 2
 b,a = a + b, b
 </code></pre>
 <p>Output: a=2,b=3
-~~真的有人这样子写代码吗~~
-<strong>Rules:</strong></p>
+~~真的有人这样子写代码吗~~  </p>
+<p><strong>Rules:</strong></p>
 <ul>
 <li>
 <p>Evaluate all expressions to the right of= from left to right.</p>
@@ -118,6 +118,7 @@ b,a = a + b, b
 <pre><code class="language-python">def &lt;name&gt;(&lt;formal parameters&gt;):
     return &lt;return expression&gt;
 </code></pre>
+<p><strong>Plus:</strong> 如果在括号内直接给变量赋值，则为”默认值“，即若无特殊声明，默认为默认值。</p>
 <h2 id="lecture-2_1">Lecture 2</h2>
 <p><strong>1.None Indicateds that Nothing is Returned</strong></p>
 <ul>
@@ -144,8 +145,7 @@ None None
 def divide_exact(n,d):
     return floordiv(n,d),mod(n,d)
 </code></pre>
-<p>如果要查看q,r的值，我们通常会采取print函数，~~但是！不仅麻烦还不够帅~~！所以这里就采用交互模式</p>
-<p>Then </p>
+<p>如果要查看q,r的值，我们通常会采取print函数，但是！~~不仅麻烦还不够帅~~！所以这里就采用交互模式</p>
 <pre><code class="language-py">python3 -i pytest.py
 &gt;&gt;&gt; q
 201
