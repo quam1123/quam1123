@@ -390,7 +390,7 @@
 </code></pre>
 <p>看过一个视频，它解释这段代码的观点采取了<strong>二进制</strong>，笔者认为值得贴出来学习<br />
 <img alt="" src="../Fast_pow.png" />
-Explain：这是计算 $7^ {105}$对指数的处理  </p>
+Explain：这是计算 <span class="arithmatex">\(7^ {105}\)</span>对指数的处理  </p>
 <p>因此，对源代码我们可以进行以下处理：</p>
 <pre><code class="language-C">int quickpow(int n,int i){
     int ans = 1,res = n;
@@ -404,7 +404,7 @@ Explain：这是计算 $7^ {105}$对指数的处理  </p>
     return ans;
 }
 </code></pre>
-<p><strong>时间复杂度</strong>：O($\log_{2}{n}$)</p>
+<p><strong>时间复杂度</strong>：O(<span class="arithmatex">\(\log_{2}{n}\)</span>)</p>
 <h4 id="_3">查缺补漏：二进制</h4>
 <p>称它为二进制数是因为它只有0和1两个数字，用数学语言来说就是<strong>基数</strong>为2。依次类推，基数为3的是三进制计数、……、基数为10的就是十进制计数。  </p>
 <p><strong>位权：</strong>
@@ -428,7 +428,7 @@ Explain：这是计算 $7^ {105}$对指数的处理  </p>
 }
 </code></pre>
 <p><del>沟槽的玩意，看了我半天，怎么会有书把原理写在下一页</del>  </p>
-<p><strong>时间复杂度</strong>：O( $\log_2 n$ )
+<p><strong>时间复杂度</strong>：O( <span class="arithmatex">\(\log_2 n\)</span> )
 [ \log_2 n] \</p>
 
 
@@ -480,6 +480,10 @@ Explain：这是计算 $7^ {105}$对指数的处理  </p>
     
     
       <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
