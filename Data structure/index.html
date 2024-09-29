@@ -389,12 +389,45 @@
 }
 </code></pre>
 <p>看过一个视频，它解释这段代码的观点采取了<strong>二进制</strong>，笔者认为值得贴出来学习<br />
-<img alt="" src="../Fast_pow.png" /></p>
+<img alt="" src="../Fast_pow.png" />
+Explain：这是计算 $7^ {105}$对指数的处理  </p>
+<p>因此，对源代码我们可以进行以下处理：</p>
+<pre><code class="language-C">int quickpow(int n,int i){
+    int ans = 1,res = n;
+    while(i&gt;0){
+        if(i % 1){//修改1
+            ans*=res;
+        }
+        i = i &gt;&gt; 1;//修改2
+        res=res*res;
+    }
+    return ans;
+}
+</code></pre>
+<p><strong>时间复杂度</strong>：O($\log_{2}{n}$)</p>
 <h4 id="_3">查缺补漏：二进制</h4>
 <p>称它为二进制数是因为它只有0和1两个数字，用数学语言来说就是<strong>基数</strong>为2。依次类推，基数为3的是三进制计数、……、基数为10的就是十进制计数。  </p>
 <p><strong>位权：</strong>
 可以借助于十进制计数来理解位权，在十进制计数中，计数单位分别为个位、十位、百位……，其中个位数表示数值1、十位数表示数值10、百位数表示数值100…<strong>每个位数表示的数值叫位权</strong>。位权通过计算基数的n-1次幂就可以得到，这里的n是指位数所在数字中的位置  </p>
-<p><strong>E.g.</strong>：二进制数00111从低位到高位的<strong>位权</strong>依次是<strong>2的0次幂1、2的1次幂2、2的2次幂4、2的3次幂8、2的4次幂16</strong></p>
+<p><strong>E.g.</strong>：二进制数00111从低位到高位的<strong>位权</strong>依次是2的0次幂<strong>1</strong>、2的1次幂<strong>2</strong>、2的2次幂<strong>4</strong>···</p>
+<p><strong>快速幂取模</strong>
+一个折腾了笔者好久的算法，书本看了好几遍没看懂，所以到处寻找是不是由于二进制没学透，后来发现是数学没学好😭😭😭😭😭
+<img alt="" src="../mode_principle.png" />
+<del>一定要学好数学</del><br />
+所以，快速幂取模算法只需要在快速幂算法的基础上在特定地方加取模就OK</p>
+<pre><code class="language-C">int modexp(int a,int b,int n){
+    int ans = 1,res = a;
+    while(b&gt;0){
+        if(i%2==1){//当然可以用i &amp; 1
+            ans=(ans*res)%n;
+        }
+        i/=2;//当然也可以用i &gt;&gt; 2
+        res=(res*res)%n;
+    }
+    return ans;
+}
+</code></pre>
+<p><del>沟槽的玩意，看了我半天</del></p>
 
 
 
