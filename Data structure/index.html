@@ -512,14 +512,11 @@ void quickpower(int M,int n)
             else
                 ans.m[i][j] = 0;
         }
-    }//这里是思想的转换，之前我们定义为1去计算，所以我们先初始化ans为
-    //单位矩阵（单位矩阵的定义就是除了主对角线是1，其他位置全都是0，这样子乘上任何一个矩阵都会等于本身），我们知道单位矩阵与任何矩阵的乘积为其本身
+    }//这里是思想的转换，之前我们定义为1去计算，所以我们先初始化ans为单位矩阵（单位矩阵的定义就是除了主对角线是1，其他位置全都是0，这样子乘上任何一个矩阵都会等于本身）
     while(M)//快速幂的步骤
     {
         if(M &amp; 1)//就是M%2==1
-        {
             ans = mul(ans,res);
-        }
         res = mul(res,res);
         M = M &gt;&gt; 1;
     }
@@ -548,6 +545,43 @@ int main()
     return 0;
 }
 
+</code></pre>
+<p><strong>矩阵快速幂的直接运用：计算斐波那契数列</strong>  </p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+const int MOD = 10000;
+struct matrix{
+    int m[2][2];
+}ans;//定义结构体矩阵
+matrix base={1,1,1,0}//数列首项
+matrix multi(matrix a,matrix b){
+    matrix tmp;
+    for(int i=0,i&lt;2;i++){
+        for(int j=0;j&lt;2;j++){
+            tmp.m[i][j]=0;
+            for(int k=0;k&lt;2;k++){
+                tmp.m[i][j]=(tmp.m[i][j]+a.m[i][k]*b.m[k][j];) % MOD;
+            }
+        }
+    }
+    return tmp;
+}
+int matrix_pow(matrix a,int n){
+    ans.m[0][0]=ans.m[1][1]=1;
+    ans.m[0][1]=ans.m[1][0]=0;
+    while(n){
+        if(n &amp; 1){
+            ans=multi(ans,a);
+        }
+        a=multi(a,a);
+        n&gt;&gt;=1;
+
+    }
+    return ans.m[0][1];
+}
+int main(){
+    int n;
+    //输入输出就不写了；
+}
 </code></pre>
 
 
