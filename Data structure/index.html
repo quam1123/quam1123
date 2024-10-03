@@ -498,19 +498,14 @@ node mul(node A,node B)
 }
 
 
-void quickpower(int M,int n)
-{
+void quickpower(int M,int n){
     int i,j;
     for(i=0; i&lt;n; i++)
     {
         for(j=0; j&lt;n; j++)
         {
-            if(i == j)
-            {
-                ans.m[i][j] = 1;
-            }
-            else
-                ans.m[i][j] = 0;
+            if(i == j) ans.m[i][j] = 1;
+            else       ans.m[i][j] = 0;
         }
     }//这里是思想的转换，之前我们定义为1去计算，所以我们先初始化ans为单位矩阵（单位矩阵的定义就是除了主对角线是1，其他位置全都是0，这样子乘上任何一个矩阵都会等于本身）
     while(M)//快速幂的步骤
