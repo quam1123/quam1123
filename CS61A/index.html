@@ -361,6 +361,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lecture-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 5
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -446,6 +455,15 @@
   <a href="#lecture-4" class="md-nav__link">
     <span class="md-ellipsis">
       Lecture 4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 5
     </span>
   </a>
   
@@ -562,6 +580,29 @@ def sum_naturals(n,term):
 </code></pre>
 <p>通过了“term”传递了函数，使得我们不需要分别写两个自定义函数分别进行自然数/立方的求和<br />
 函数也可以作为return 后的值被返回</p>
+<h2 id="lecture-5">Lecture 5</h2>
+<p><strong>1. Environment!</strong>  </p>
+<pre><code class="language-py">def make_adder(n):
+    def adder(k):
+        return n+k
+    return adder
+
+adder_three=make_adder(3)
+result=adder_three(4)
+result2=adder_three(5)
+adder_four=make_adde(4)
+result3=adder_four(4)
+</code></pre>
+<p>And you will get the answers:  </p>
+<pre><code>result=6
+result2=7
+result3=8
+</code></pre>
+<p><strong>Explain:</strong><br />
+每个函数都有运行的<strong>环境框架</strong>，正常情况下，我们定义的函数是<strong>全局框架（<em>global</em>）</strong>，而嵌套定义的函数，如代码中的make_adder和adder ,make_adder是在全局框架中运行的，而adder是在make_adder的框架中运行的，因此，我们赋予adder_three函数类型，之后再多次给其值，并不会改变其<em>parent flame</em>  </p>
+<p><strong>2.Lambda定义函数</strong><br />
+一张图浅浅带过<br />
+<img alt="" src="../Lambda.png" />  </p>
 
 
 
