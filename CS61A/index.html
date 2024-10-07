@@ -379,6 +379,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lecture-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 8
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -482,6 +491,15 @@
   <a href="#lecture-7" class="md-nav__link">
     <span class="md-ellipsis">
       Lecture 7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 8
     </span>
   </a>
   
@@ -638,7 +656,50 @@ def real_sqrt(x):
 <p>大概翻译一下，代码意思是写了一个<del>ctf</del>新的if+else语句,然后想在后面的real_sqrt里面调用，但是！<br />
 <strong>调用表达式不允许跳过计算部分！！！</strong><br />
 因此其实它会直接计算x&gt;=0 和sqrt这俩，不会作为条件语句和函数跑到if_里面去  <del>正常人会这样子写吗</del> <br />
-不过可以在里面丢进去and 和 or这俩的语句</p>
+不过可以在里面丢进去and 和 or这俩的语句   </p>
+<h2 id="lecture-8">Lecture 8</h2>
+<p><strong>Function Decorators</strong>  </p>
+<pre><code class="language-py">def trace1(fn):
+    def traced(x):
+        print(&quot;Calling&quot;,fn,'on argument',x)
+        return fn(x)
+    return traced
+
+@trace1
+def square(x):
+    return x*x
+
+@trace1
+def sum_squares_up_to(n):
+    k=1
+    total=0
+    while k&lt;=n:
+        total,k=total+square(k),k+1
+    return total
+
+</code></pre>
+<p>and get   </p>
+<pre><code class="language-py">&gt;&gt;&gt; sum_squares_up_to(5)
+Calling &lt;function sum_squares_up_to at 0x101712480&gt; on argument 5
+Calling &lt;function square at 0x101712340&gt; on argument 1
+Calling &lt;function square at 0x101712340&gt; on argument 2
+Calling &lt;function square at 0x101712340&gt; on argument 3
+Calling &lt;function square at 0x101712340&gt; on argument 4
+Calling &lt;function square at 0x101712340&gt; on argument 5
+55
+</code></pre>
+<p>Actually    </p>
+<p><strong>This</strong>    </p>
+<pre><code class="language-py">@trace1 
+def triple(x):
+    return x*3
+</code></pre>
+<p><strong>is identical to</strong>   </p>
+<pre><code class="language-py">def triple(x):
+    return 3*x 
+triple = trace1(triple)
+</code></pre>
+<p>But 前一个比较好，The Magic of Decorator!  </p>
 
 
 
