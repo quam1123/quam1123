@@ -370,6 +370,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lecture-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 7
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -464,6 +473,15 @@
   <a href="#lecture-5" class="md-nav__link">
     <span class="md-ellipsis">
       Lecture 5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 7
     </span>
   </a>
   
@@ -603,6 +621,24 @@ result3=8
 <p><strong>2.Lambda定义函数</strong><br />
 一张图浅浅带过<br />
 <img alt="" src="../Lambda.png" />  </p>
+<h2 id="lecture-7">Lecture 7</h2>
+<p><strong>一些调用函数的规则</strong><br />
+if else语句太低级，怎么办？<br />
+想写高级的！  </p>
+<pre><code class="language-py">def if_(c,t,f):
+    if c:
+        return t
+    else:
+        return f
+from math import sqrt
+
+def real_sqrt(x):
+    return if_(x&gt;=0,sqrt(x),0);
+</code></pre>
+<p>大概翻译一下，代码意思是写了一个<del>ctf</del>新的if+else语句,然后想在后面的real_sqrt里面调用，但是！<br />
+<strong>调用表达式不允许跳过计算部分！！！</strong><br />
+因此其实它会直接计算x&gt;=0 和sqrt这俩，不会作为条件语句和函数跑到if_里面去  <del>正常人会这样子写吗</del> <br />
+不过可以在里面丢进去and 和 or这辆的语句</p>
 
 
 
