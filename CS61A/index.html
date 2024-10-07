@@ -617,7 +617,7 @@ result2=7
 result3=8
 </code></pre>
 <p><strong>Explain:</strong><br />
-每个函数都有运行的<strong>环境框架</strong>，正常情况下，我们定义的函数是<strong>全局框架（<em>global</em>）</strong>，而嵌套定义的函数，如代码中的make_adder和adder ,make_adder是在全局框架中运行的，而adder是在make_adder的框架中运行的，因此，我们赋予adder_three函数类型，之后再多次给其值，并不会改变其<em>parent flame</em>  </p>
+每个函数都有运行的<strong>环境框架</strong>，正常情况下，我们定义的函数是<strong>全局框架（<em>global</em>）</strong>，而嵌套定义的函数，如代码中的make_adder和adder ,make_adder是在全局框架中运行的，而adder是在make_adder的框架中运行的，因此，我们赋予adder_three函数类型，之后再多次给其值，并不会改变其<em>parent frame</em>  </p>
 <p><strong>2.Lambda定义函数</strong><br />
 一张图浅浅带过<br />
 <img alt="" src="../Lambda.png" />  </p>
@@ -638,7 +638,7 @@ def real_sqrt(x):
 <p>大概翻译一下，代码意思是写了一个<del>ctf</del>新的if+else语句,然后想在后面的real_sqrt里面调用，但是！<br />
 <strong>调用表达式不允许跳过计算部分！！！</strong><br />
 因此其实它会直接计算x&gt;=0 和sqrt这俩，不会作为条件语句和函数跑到if_里面去  <del>正常人会这样子写吗</del> <br />
-不过可以在里面丢进去and 和 or这辆的语句</p>
+不过可以在里面丢进去and 和 or这俩的语句</p>
 
 
 
