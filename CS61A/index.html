@@ -388,6 +388,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lecture-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 10
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -500,6 +509,15 @@
   <a href="#lecture-8" class="md-nav__link">
     <span class="md-ellipsis">
       Lecture 8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 10
     </span>
   </a>
   
@@ -699,7 +717,31 @@ def triple(x):
     return 3*x 
 triple = trace1(triple)
 </code></pre>
-<p>But 前一个比较好，The Magic of Decorator!  </p>
+<p>But 前一个比较好，The Magic of Decorator!   </p>
+<h2 id="lecture-10">Lecture 10</h2>
+<p><strong>递归！</strong> <br />
+终于会用lambda了，但是要注意调用   </p>
+<pre><code class="language-py">def inverse_cascade(n):
+    grow(n)
+    print(n)
+    shrink(n)
+def f_then_g(f,g,n):
+    if n:
+        f(n)
+        g(n)
+
+grow = lambda n: f_then_g(grow,print,n//10)
+shrink = lambda n: f_then_g(print,shrink,n//10)
+</code></pre>
+<p>Output   </p>
+<pre><code class="language-py">1
+12
+123
+1234
+123
+12
+1
+</code></pre>
 
 
 
