@@ -397,6 +397,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lecture-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 11
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -518,6 +527,15 @@
   <a href="#lecture-10" class="md-nav__link">
     <span class="md-ellipsis">
       Lecture 10
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 11
     </span>
   </a>
   
@@ -741,6 +759,103 @@ shrink = lambda n: f_then_g(print,shrink,n//10)
 123
 12
 1
+</code></pre>
+<p>以及递归要注意什么时候离开递归，建议把离开条件先写。</p>
+<h2 id="lecture-11">Lecture 11</h2>
+<p><strong>list !!</strong><br />
+<del>int a[100]</del><br />
+python的数组（一些基本的定义的事情）：  </p>
+<pre><code class="language-py">&gt;&gt;&gt;digits= [1,2,3,4]
+#we can get the number of elements:
+&gt;&gt;&gt;len(digits)
+4
+&gt;&gt;&gt;[2,7]+digits*2
+[2,7,1,2,3,4,1,2,3,4]#write twice
+#Nested lists
+&gt;&gt;&gt;pairs[[30,40],[50,60]]
+&gt;&gt;&gt;pairs[1]
+[50,60]
+&gt;&gt;&gt;pairs[1][0]
+50 #amazing to C
+</code></pre>
+<p>还有一些C没有的内置功能  </p>
+<pre><code class="language-py">#whether an element in a compound value
+&gt;&gt;&gt;digits = [1,8,2,8]
+&gt;&gt;&gt;1 in digits
+True
+&gt;&gt;&gt;5 not in digits
+True
+&gt;&gt;&gt;5 in digits
+False
+&gt;&gt;&gt;not (5 in digits)
+True
+#in doesn't find subsequece ,but a single element
+#like:
+&gt;&gt;&gt;[1,8] in digits
+False
+&gt;&gt;&gt;[1,8] in [1,[1,8],8]
+True
+#but
+&gt;&gt;&gt;[1,8] in [1,[[1,8]],8]
+False  
+#don't hide so deep
+</code></pre>
+<p>奇妙的for语句   </p>
+<pre><code class="language-py">#a piece with &quot;while&quot;
+def count(s,value):
+    total,index=0,0
+    while index&lt;len(s):
+        element = s[index]
+        if element == value:
+            total =total + 1
+        index += 1
+    return total
+#and we can use for statement !
+def count(s,value):
+    total=0
+    for element in s:
+        if element == value:
+            total += 1
+    return total
+#two lines less than the former one !
+for &lt;name&gt; in &lt;expressions&gt;:
+    &lt;suite&gt;
+
+&gt;&gt;&gt;pairs=[[1,2],[2,2],[2,3],[4,4]]
+&gt;&gt;&gt;same_count=0
+&gt;&gt;&gt;for x,y in pairs:##give each element a name —— sequence unpacking!
+    if x == y:
+        same_count += 1
+
+
+&gt;&gt;&gt;same_count
+2
+##two figures in one element
+</code></pre>
+<p>至于普通的多次循环怎么写：   </p>
+<pre><code class="language-py">def cheer(n):
+    for _ in range(5):
+        '''
+        range(5)=[0,1,2,3,4]
+        use _ or    (a blank) when we don't want to use that name
+        '''
+        print('Go bears!')
+
+Go bears!
+Go bears!
+Go bears!
+Go bears!
+Go bears!
+</code></pre>
+<p><strong>List comprehension!</strong>  </p>
+<pre><code class="language-py">&gt;&gt;&gt;odds = [1,3,5,7,9]
+&gt;&gt;&gt; [x+1 for x in odds]
+[2,4,6,8,10]
+&gt;&gt;&gt; [x for x in odds if 25%x == 0]##keep just parts of the list
+[1,5]
+&gt;&gt;&gt; [x+1 for x in odds if 25%x == 0]
+[2,6]
+# amazing to C
 </code></pre>
 
 
