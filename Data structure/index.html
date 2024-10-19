@@ -430,7 +430,7 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
 </code></pre></div>
 看过一个视频，它解释这段代码的观点采取了<strong>二进制</strong>，笔者认为值得贴出来学习<br />
-<img alt="" src="../Fast_pow.png" />
+<img alt="" src="../Data/Fast_pow.png" />
 Explain：这是计算 <span class="arithmatex">\(7^ {105}\)</span>对指数的处理  </p>
 <p>因此，对源代码我们可以进行以下处理：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">quickpow</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">){</span>
@@ -481,7 +481,7 @@ mask = 0100  (掩码，检查第三位)<br />
 结果 = 0100  (非零，表示第三位为 1)  </p>
 <h3 id="_4"><strong>快速幂取模</strong></h3>
 <p>一个折腾了笔者好久的算法，书本看了好几遍没看懂，所以到处寻找是不是由于二进制没学透，后来发现是数学没学好😭😭😭😭😭
-<img alt="" src="../mode_principle.png" />
+<img alt="" src="../Data/mode_principle.png" />
 <del>一定要学好数学</del><br />
 所以，快速幂取模算法只需要在快速幂算法的基础上在特定地方加取模就OK
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">modexp</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">){</span>
@@ -499,7 +499,7 @@ mask = 0100  (掩码，检查第三位)<br />
 <del>沟槽的玩意，看了我半天，怎么会有书把原理写在下一页</del>  </p>
 <p><strong>时间复杂度</strong>：O( <span class="arithmatex">\(\log_2 n\)</span> )<br />
 附一张基本模运算的表  </p>
-<p><img alt="" src="../mode_principle2.png" />  </p>
+<p><img alt="" src="../Data/mode_principle2.png" />  </p>
 <h3 id="_5"><strong>矩阵快速幂</strong></h3>
 <p>矩阵快速幂的原理其实和普通快速幂一模一样，唯一的区别就是把相乘的对象从数字/字母变成了一坨矩阵，相乘的方式也是从直接✖️变成了复杂的矩阵乘法<br />
 矩阵乘法的原理这里笔者就不加赘述，上代码！<br />
