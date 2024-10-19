@@ -1013,7 +1013,25 @@ a kind of special sequence  </p>
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
 <a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="mi">5</span> <span class="c1"># C say : impossible</span>
 </code></pre></div>
-顺便附上math库吧 :  <a href="https://www.runoob.com/markdown/md-link.html">菜鸟教程</a>  </p>
+顺便附上math库吧 :  <a href="https://www.runoob.com/markdown/md-link.html">菜鸟教程</a>  <br />
+<strong>Data abstraction</strong><br />
+一个有些抽象的思想，我不太清楚我是否完全理解 <br />
+<img alt="" src="Abstraction.png" /> <br />
+例子：处理分数的加减乘除：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="c1"># rational(n,d) :returns a rational number x</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="c1"># numer(x) : returns the numerators of x</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="c1"># denom(x) : returns the denominator of x</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="k">def</span> <span class="nf">mul_rational</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>    <span class="k">return</span> <span class="n">rational</span><span class="p">(</span><span class="n">numer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">numer</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="n">demon</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">demon</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</code></pre></div>
+<p>An example of violating data abstraction:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">def</span> <span class="nf">mul_rational</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>    <span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="n">mul_rational</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+</code></pre></div>
+<p><img alt="" src="fire1.png" /><br />
+<img alt="" src="fire2.png" />
+<del>第一次看这教授红温😋</del></p>
 
 
 
