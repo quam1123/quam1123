@@ -456,6 +456,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lecture-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 13
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -600,6 +609,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lecture-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture 13
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -669,7 +687,7 @@ Output: a=2,b=3
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="mi">2</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kc">None</span> <span class="kc">None</span>
 </code></pre></div>
-<img alt="" src="../side%20effect.png" /></p>
+<img alt="" src="side%20effect.png" /></p>
 <p><strong>2.python交互界面：</strong>
 例如以下代码：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">floordiv</span><span class="p">,</span><span class="n">mod</span>
@@ -733,7 +751,7 @@ And you will get the answers:<br />
 每个函数都有运行的<strong>环境框架</strong>，正常情况下，我们定义的函数是<strong>全局框架（<em>global</em>）</strong>，而嵌套定义的函数，如代码中的make_adder和adder ,make_adder是在全局框架中运行的，而adder是在make_adder的框架中运行的，因此，我们赋予adder_three函数类型，之后再多次给其值，并不会改变其<em>parent frame</em>  </p>
 <p><strong>2.Lambda定义函数</strong><br />
 一张图浅浅带过<br />
-<img alt="" src="../Lambda.png" />  </p>
+<img alt="" src="Lambda.png" />  </p>
 <h2 id="lecture-7">Lecture 7</h2>
 <p><strong>一些调用函数的规则</strong><br />
 if else语句太低级，怎么办？<br />
@@ -916,7 +934,7 @@ python的数组（一些基本的定义的事情）：  </p>
 <a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="c1"># amazing to C</span>
 </code></pre></div></p>
 <h2 id="lecture-12">Lecture 12</h2>
-<p><img alt="" src="../container.png" /><br />
+<p><img alt="" src="container.png" /><br />
 好复杂一数组，这在C我都不敢想</p>
 <p><strong>slice</strong><br />
 就是获取一个数组里面一些东西<br />
@@ -990,6 +1008,12 @@ a kind of special sequence  </p>
 <a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="p">{</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">2</span> <span class="p">}</span>
 <a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="p">{</span><span class="mi">9</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="mi">25</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
 </code></pre></div>
+<h2 id="lecture-13">Lecture 13</h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kn">import</span> <span class="nn">math</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="mi">5</span> <span class="c1"># C say : impossible</span>
+</code></pre></div>
+顺便附上math库吧 :  <a href="https://www.runoob.com/markdown/md-link.html">菜鸟教程</a>  </p>
 
 
 
